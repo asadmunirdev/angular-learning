@@ -18,6 +18,7 @@ import { ChildComponent } from './child/child.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { RouterComponent } from './router/router.component';
+import { NoPageComponent } from './no-page/no-page.component';
 // import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 // import { MatButtonModule } from '@angular/material/button'
 // import { MatIconModule } from '@angular/material/icon';
@@ -29,7 +30,8 @@ import { RouterComponent } from './router/router.component';
     TodoAppComponent,
     ChildComponent,
     HomeComponent,
-    RouterComponent
+    RouterComponent,
+    NoPageComponent
   ],
   imports: [
     BrowserModule,

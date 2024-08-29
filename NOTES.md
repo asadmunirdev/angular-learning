@@ -347,3 +347,43 @@ console.log('Password:', this.userPassword);
 ## Directives:
 
 *ngIf and *ngFor these are all directives and we can made custom directories as well and use according to requirements.
+
+## Routing:
+
+there are 2 tyoes of routing
+
+1. static routing
+2. dynamic routing
+
+## Static routing:
+
+[_html_]: <a routerLink="home">Home</a><br>
+<a routerLink="header">Header</a><br>
+<a routerLink="todo">Todo</a><br>
+
+[_routing-module.ts_]: const routes: Routes = [
+{ path: 'header', component: HeaderComponent },
+{ path: 'todo', component: TodoAppComponent },
+{ path: 'home', component: HomeComponent },
+{ path: '', redirectTo: '/home', pathMatch: 'full' } // Optional: redirect to a default route
+];
+
+## Dynamic routing:
+
+it is used to pass id and values with routing
+
+## 404 no page found:
+
+[_html_]: <div class="container text-center d-flex flex-column justify-content-center align-items-center vh-100">
+
+    <div class="display-1 fw-bold text-danger">404</div>
+    <h1 class="h2 fw-semibold mt-4">Page Not Found</h1>
+    <p class="lead text-muted mt-3">
+        Sorry, the page you are looking for does not exist. It might have been moved or deleted.
+    </p>
+    <a routerLink="/home" class="btn btn-primary mt-4">Go Back Home</a>
+
+</div>
+
+[_routing-module.ts_]: add this
+{ path: '\*\*', component: NoPageComponent },
