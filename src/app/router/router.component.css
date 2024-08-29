@@ -1,0 +1,31 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+  /* Add custom styles for navbar */
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  margin-left: 1rem;
+}
+
+.nav-link:hover {
+  color: #007bff; /* Bootstrap primary color */
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .nav-link {
+    margin: 0.5rem 0;
+  }
+}

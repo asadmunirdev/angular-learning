@@ -1,0 +1,30 @@
+.todo-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .todo-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1976d2; /* Material Blue 500 */
+  }
+  
+  .form-field {
+    width: 100%;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+  mat-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  mat-icon {
+    color: #f44336; /* Material Red 500 */
+  }
+  
