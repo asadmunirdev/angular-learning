@@ -1,40 +1,20 @@
-import { Component } from '@angular/core';
-import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  title = 'Reactive Forms';
-  loginForm = new FormGroup({
-    user: new FormControl('', [
-      Validators.required,
-      Validators.pattern('[a-zA-Z]+$'),
-    ]),
-    password: new FormControl('', [
-      Validators.required,
-      Validators.minLength(5),
-    ]),
-  });
+export class HomeComponent implements OnInit {
+  features = [
+    { title: 'Feature 1', description: 'Description of feature 1.' },
+    { title: 'Feature 2', description: 'Description of feature 2.' },
+    { title: 'Feature 3', description: 'Description of feature 3.' }
+  ];
 
-  get user() {
-    return this.loginForm.get('user');
+  constructor() { }
+
+  ngOnInit(): void {
+    // Initialization logic can go here
   }
-
-  get password() {
-    return this.loginForm.get('password');
-  }
-
-  userName: string = '';
-  userPassword: string = '';
-  userLogin(item: any) {
-    this.userName = item.user;
-    this.userPassword = item.password;
-    console.log('Username:', this.userName);
-    console.log('Password:', this.userPassword);
-  }
-
 }

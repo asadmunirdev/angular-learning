@@ -1,0 +1,32 @@
+<div class="container text-center mt-5">
+    <h2 class="mb-4">{{ title }}</h2>
+  
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>
+            <div *ngIf="user.data; else noData">
+              <ul class="list-unstyled">
+                <li *ngFor="let key of getKeys(user.data)">
+                  <strong>{{ key }}:</strong> {{ user.data[key] }}
+                </li>
+              </ul>
+            </div>
+            <ng-template #noData>
+              <span class="text-muted">No data available</span>
+            </ng-template>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

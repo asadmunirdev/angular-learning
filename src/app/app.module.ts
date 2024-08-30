@@ -1,5 +1,5 @@
-import { NgModule , LOCALE_ID} from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { NgModule, LOCALE_ID } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbAlertModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -13,15 +13,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { TodoAppComponent } from './todo-app/todo-app.component';
 import { ChildComponent } from './child/child.component';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { RouterComponent } from './router/router.component';
 import { NoPageComponent } from './no-page/no-page.component';
-// import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-// import { MatButtonModule } from '@angular/material/button'
-// import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiDataComponent } from './api-data/api-data.component';
+import { ContactComponent } from './contact/contact.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,10 +33,13 @@ import { NoPageComponent } from './no-page/no-page.component';
     ChildComponent,
     HomeComponent,
     RouterComponent,
-    NoPageComponent
+    NoPageComponent,
+    ApiDataComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -45,11 +50,11 @@ import { NoPageComponent } from './no-page/no-page.component';
     MatInputModule,
     MatFormFieldModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule,
   ],
   providers: [
-    {provide: LOCALE_ID, useValue: 'en-PK' }, // Set locale to Pakistani
-    provideClientHydration()
+    { provide: LOCALE_ID, useValue: 'en-PK' } // Set locale to Pakistani
   ],
   bootstrap: [AppComponent]
 })
@@ -57,4 +62,4 @@ export class AppModule {
   constructor() {
     registerLocaleData(localeEnPk); // Register the locale data
   }
- }
+}

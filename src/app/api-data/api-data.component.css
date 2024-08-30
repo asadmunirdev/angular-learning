@@ -1,0 +1,17 @@
+/* app.component.css */
+.table th, .table td {
+    vertical-align: middle;
+  }
+  
+  .table td {
+    word-break: break-word; /* Ensures long text wraps nicely */
+  }
+  
+  .table-dark th, .table-dark td {
+    color: #fff;
+  }
+  
+  .table td strong {
+    color: #333;
+  }
+  
