@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'; // Make sure OnInit is imported
 import { UserDataService, UserData } from '../services/user-data.service';
 
+
 @Component({
   selector: 'app-api-data',
   templateUrl: './api-data.component.html',

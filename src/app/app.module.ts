@@ -23,6 +23,7 @@ import { NoPageComponent } from './no-page/no-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiDataComponent } from './api-data/api-data.component';
 import { ContactComponent } from './contact/contact.component';
+import { ApiPostComponent } from './api-post/api-post.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ContactComponent } from './contact/contact.component';
     RouterComponent,
     NoPageComponent,
     ApiDataComponent,
-    ContactComponent
+    ContactComponent,
+    ApiPostComponent
   ],
   imports: [
     BrowserModule,
